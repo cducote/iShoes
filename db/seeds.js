@@ -20,15 +20,15 @@ const chrisBills = new Bills({
 })
 
 const chris = new Shoesie({
-    username: Chris,
-    bills: [{}],
-    income: [{}],
+    shoesieName: "Chris",
+    bills: [chrisBills],
+    income: [chrisIncome],
     billsTotal: 1035,
     incomeTotal: 2400,
     affordShoes: true
 })
 
-User.deleteMany()
+Shoesie.deleteMany()
     .then(() => {
       return Shoesie.insertMany([chris])
     })

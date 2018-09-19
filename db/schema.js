@@ -15,7 +15,7 @@ const BillsSchema = new Schema({
 }) 
 
 const ShoesieSchema = new Schema({
-    username: String,
+    shoesieName: String,
     bills: [BillsSchema],
     income: [IncomeSchema],
     billsTotal: Number,
