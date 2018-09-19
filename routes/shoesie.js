@@ -1,9 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const { Shoesie } = require('../db/schema')
+
+
+// Index, Show all
+// Do i want to ??
+
+// New, Render New Form
+
+// Show, Show one
+
+// Edit, Render Edit Form
+
+// Create
+
+// Update
+   
+// Delete
+
 
 module.exports = router;
