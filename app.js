@@ -9,7 +9,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var shoesieRouter = require('./routes/shoesie');
 
 var app = express();
 var methodOverride = require('method-override')
@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter); 
-app.use('/users', usersRouter);
+app.use('/shoesie', shoesieRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -25,7 +25,7 @@ const ShoesieSchema = new Schema({
 
 const IncomeModel = mongoose.model('Income', IncomeSchema)
 const BillsModel = mongoose.model('Bills', BillsSchema)
-const ShoesieModel = mongoose.model('User', ShoesieSchema)
+const ShoesieModel = mongoose.model('Shoesie', ShoesieSchema)
 
 module.exports = {
     Income: IncomeModel,
