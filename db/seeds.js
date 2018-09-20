@@ -9,7 +9,7 @@ const { Shoesie, Bills, Income } = Schema
 const chrisIncome = new Income({
     primaryIncome: 2000,
     otherIncome: 400,
-    totalIncome: 2400 //this + that
+    totalIncome: 0 //this + that
 })
 
 const chrisBills = new Bills({
