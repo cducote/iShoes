@@ -12,6 +12,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 var indexRouter = require('./routes/index');
 var shoesieRouter = require('./routes/shoesies');
 var incomeRouter = require('./routes/income');
+var billsRouter = require('./routes/bills')
 
 var app = express();
 var methodOverride = require('method-override')
@@ -31,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter); 
 app.use('/shoesies', shoesieRouter);
 app.use('/shoesies/:shoesieId/income', incomeRouter);
+app.use('/shoesies/:shoesieId/bills', billsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
