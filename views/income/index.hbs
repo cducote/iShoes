@@ -1,0 +1,8 @@
+<h1>All Users <a href='shoesie/{{shoesieId}}/income/new'>( new )</a></h1>
+
+<div>
+    {{#each income}}
+        <div>Name: {{this.name}}
+        <a href='/users/{{../userId}}/bands/{{this._id}}'>Go to Band</a></div>
+    {{/each}}
+</div>
