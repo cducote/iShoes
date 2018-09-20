@@ -2,8 +2,9 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const IncomeSchema = new Schema({
-    income: Number,
-    otherIncome: Number
+    primaryIncome: Number,
+    otherIncome: Number,
+    totalIncome: Number,
 })
 
 const BillsSchema = new Schema({
@@ -16,8 +17,8 @@ const BillsSchema = new Schema({
 
 const ShoesieSchema = new Schema({
     shoesieName: String,
-    bills: [BillsSchema],
-    income: [IncomeSchema],
+    bills: BillsSchema,
+    income: IncomeSchema,
     billsTotal: Number,
     incomeTotal: Number,
     affordShoes: Boolean

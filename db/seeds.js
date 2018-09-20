@@ -7,8 +7,9 @@ const Schema = require('./schema')
 const { Shoesie, Bills, Income } = Schema
 
 const chrisIncome = new Income({
-    income: 2000,
-    otherIncome: 400
+    primaryIncome: 2000,
+    otherIncome: 400,
+    totalIncome: 2400 //this + that
 })
 
 const chrisBills = new Bills({
@@ -21,8 +22,8 @@ const chrisBills = new Bills({
 
 const chris = new Shoesie({
     shoesieName: "Chris",
-    bills: [chrisBills],
-    income: [chrisIncome],
+    bills: chrisBills,
+    income: chrisIncome,
     billsTotal: 1035,
     incomeTotal: 2400,
     affordShoes: true
@@ -30,6 +31,7 @@ const chris = new Shoesie({
 
 Shoesie.deleteMany()
     .then(() => {
+      console.log('INSERTING', chris)
       return Shoesie.insertMany([chris])
     })
     .then(() => {
