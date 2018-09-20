@@ -1,0 +1,10 @@
+<h1>Edit Bills</h1> 
+
+<form action='/shoesies/{{shoesie._id}}/bills?_method=PUT' method='POST'>
+    <div>Rent:<br><input type='text' name='rent' value='{{bills.rent}}'></div>
+    <div>Car Insurance:<br><input type='text' name='carInsurance' value='{{bills.carInsurance}}'></div>
+    <div>Power Bill:<br><input type='text' name='power' value='{{bills.power}}'></div>
+    <div>Credit Cards:<br><input type='text' name='cc' value='{{bills.cc}}'></div>
+    <div>Other:<br><input type='text' name='other' value='{{bills.other}}'></div>
+    <div><input type='submit' value='Update Bills'></div>
+</form>
