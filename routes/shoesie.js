@@ -3,14 +3,20 @@ var router = express.Router();
 
 const { Shoesie } = require('../db/schema')
 
-
-// Index, Show all
-// Do i want to ??
-
-// New, Render New Form
-
-// Show, Show one
-
+// Show my new Shoesie page
+router.post('/', (req, res) => {
+    Shoesie.create(req.body)
+      .then((shoesie) => {
+        res.redirect(`/shoesie/${shoesie._id}`)
+      })
+  })
+// Show
+router.get('/:id', (req, res) => {
+    Shoesie.findById(req.params.id)
+      .then((shoesie) => {
+        res.render('shoesie/show', { shoesie })
+      })
+  })
 // Edit, Render Edit Form
 
 // Create
