@@ -30,11 +30,17 @@ router.post('/', (req, res) => {
       })
   })
 // Edit, Render Edit Form
-
-// Create
-
+router.get('/:id/edit', (req, res) => {
+  // res.send('hi')
+  Shoesie.findById(req.params.id)
+    .then((shoesie) => {
+      console.log(shoesie)
+      res.render('shoesies/edit', { shoesie })
+    })
+  })
 // Update
-   
+
+
 // Delete
 router.delete('/:id', (req, res) => {
   Shoesie.findByIdAndRemove(req.params.id)
