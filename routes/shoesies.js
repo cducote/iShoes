@@ -39,8 +39,12 @@ router.get('/:id/edit', (req, res) => {
     })
   })
 // Update
-
-
+router.put('/:id', (req, res) => {
+  Shoesie.findByIdAndUpdate(req.params.id, req.body)
+    .then((shoesie) => {
+      res.redirect(`/shoesies/${shoesie._id}`)
+    })
+})     
 // Delete
 router.delete('/:id', (req, res) => {
   Shoesie.findByIdAndRemove(req.params.id)
