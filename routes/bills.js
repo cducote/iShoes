@@ -17,12 +17,12 @@ router.get('/', (req, res) => {
         console.log(error)
     })
 })
-// Edit Form
+// Edit Bills Form
 router.get('/edit', (req, res) => {
     Shoesie.findById(req.params.shoesieId)
       .then((shoesie) => {
-        console.log(shoesie)
-        res.render('bills/edit', { shoesie,
+        res.render('bills/edit', { 
+        shoesie,
         shoesieId: req.params.shoesieId,
         bills: shoesie.bills
      })

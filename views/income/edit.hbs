@@ -1,0 +1,7 @@
+<h1>Edit</h1> 
+
+<form action='/shoesies/{{shoesie._id}}/income?_method=PUT' method='POST'>
+    <div>Income:<br><input type='text' name='primaryIncome' value='{{income.primaryIncome}}'></div>
+    <div>Other:<br><input type='text' name='otherIncome' value='{{income.otherIncome}}'></div>
+    <div><input type='submit' value='Update Income'></div>
+</form>
