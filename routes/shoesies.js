@@ -19,9 +19,10 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   Shoesie.findById(req.params.id)
     .then((shoesie) => {
-
-      console.log(shoesie.incomeTotal)
-      
+      shoesie.net = shoesie.incomeTotal - shoesie.billsTotal
+      return shoesie.save()
+    })
+    .then((shoesie) => {
       res.render('shoesies/show', { shoesie })
     })
 })

@@ -8,6 +8,7 @@ const defaultBills = {
     cc: 0,
     other: 0
 }
+
 const defaultIncome = {
     primaryIncome: 0,
     otherIncome: 0
@@ -36,10 +37,10 @@ const ShoesieSchema = new Schema({
         type: IncomeSchema,
         default: defaultIncome
     },
+    net: { type: Number, default: 0 },
     billsTotal: Number,
     incomeTotal: Number,
     affordShoes: Boolean
-
 })
 
 const IncomeModel = mongoose.model('Income', IncomeSchema)
