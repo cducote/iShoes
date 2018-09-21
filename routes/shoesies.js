@@ -19,7 +19,13 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   Shoesie.findById(req.params.id)
     .then((shoesie) => {
-      shoesie.net = shoesie.incomeTotal - shoesie.billsTotal
+      shoesie.net = parseInt(shoesie.incomeTotal - shoesie.billsTotal)
+      if (shoesie.net >= 100) {
+        shoesie.affordShoes = true
+      } else {
+        shoesie.affordShoes = false
+      }
+      // shoesie.affordShoes = true 
       return shoesie.save()
     })
     .then((shoesie) => {
@@ -28,6 +34,7 @@ router.get('/:id', (req, res) => {
 })
 // Show One Redirect
 router.post('/', (req, res) => {
+    
     Shoesie.create(req.body)
       .then((shoesie) => {
         res.redirect(`/shoesies/${shoesie._id}`)

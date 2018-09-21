@@ -23,6 +23,7 @@ const chris = new Shoesie({
     shoesieName: "Chris",
     bills: chrisBills,
     income: chrisIncome,
+    net: 0,
     billsTotal: 0,
     incomeTotal: 0,
     affordShoes: true
