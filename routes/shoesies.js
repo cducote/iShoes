@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
       // figure net amount
       shoesie.net = parseInt(shoesie.incomeTotal - shoesie.billsTotal)
       // determine if user can afford shoes or not
-      if (shoesie.net >= 100) {
+      if (shoesie.net >= shoesie.shoeCost) {
         shoesie.affordShoes = true
       } else {
         shoesie.affordShoes = false
@@ -51,7 +51,7 @@ router.get('/:id/edit', (req, res) => {
 router.get('/:id/shoecost', (req, res) => {
   Shoesie.findById(req.params.id)
     .then((shoesie) => {
-      res.render('shoesies/edit', { shoesie })
+      res.render('shoesies/shoecost', { shoesie })
     })
   })
 // Update

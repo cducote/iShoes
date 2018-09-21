@@ -6,13 +6,16 @@
     <a href='/shoesies/{{shoesie._id}}/income'>(+) Income</a>
 </div>
 <br><br>
-<br>Income total: {{shoesie.incomeTotal}}
-<br>Bills total: {{shoesie.billsTotal}}
-<br>Net: {{shoesie.net}}
+<br><a href='{{shoesie._id}}/shoecost'>Shoe Cost:</a> {{shoesie.shoeCost}}
+{{!-- <br>Income total: {{shoesie.incomeTotal}} --}}
+{{!-- <br>Bills total: {{shoesie.billsTotal}} --}}
+{{!-- <br>Net: {{shoesie.net}} --}}
 <br>Can afford shoes?: {{shoesie.affordShoes}}
-<br>Shoe Cost: {{shoesie.shoeCost}} | <a href='shoesies/{{shoesie._id}}/shoecost'>Shoe Cost</a>
 <br>
-<a href='/shoesies'>See the Shoesie Family</a><br><br>
+<br>
+<br><br>
+<br>
+<a href='/shoesies'>See the Shoesie Family</a><br>
  <a href='/shoesies/{{shoesie._id}}/edit'>Edit Shoesie</a>
 <form action='/shoesies/{{shoesie._id}}?_method=DELETE' method='POST'><input type="submit" value='Delete Shoesie'>
     </form>
