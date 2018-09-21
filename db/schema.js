@@ -42,6 +42,7 @@ const ShoesieSchema = new Schema({
     net: { type: Number, default: 0 },
     billsTotal: { type: Number, default: 0 },
     incomeTotal: { type: Number, default: 0 },
+    shoeCost: { type: Number, default: 0 },
     affordShoes: { type: Boolean, default: 'no' }
 })
 

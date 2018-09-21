@@ -19,13 +19,14 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   Shoesie.findById(req.params.id)
     .then((shoesie) => {
+      // figure net amount
       shoesie.net = parseInt(shoesie.incomeTotal - shoesie.billsTotal)
+      // determine if user can afford shoes or not
       if (shoesie.net >= 100) {
         shoesie.affordShoes = true
       } else {
         shoesie.affordShoes = false
       }
-      // shoesie.affordShoes = true 
       return shoesie.save()
     })
     .then((shoesie) => {
@@ -34,7 +35,6 @@ router.get('/:id', (req, res) => {
 })
 // Show One Redirect
 router.post('/', (req, res) => {
-    
     Shoesie.create(req.body)
       .then((shoesie) => {
         res.redirect(`/shoesies/${shoesie._id}`)
@@ -42,10 +42,15 @@ router.post('/', (req, res) => {
   })
 // Edit, Render Edit Form
 router.get('/:id/edit', (req, res) => {
-  // res.send('hi')
   Shoesie.findById(req.params.id)
     .then((shoesie) => {
-      console.log(shoesie)
+      res.render('shoesies/edit', { shoesie })
+    })
+  })
+// Shoe cost form
+router.get('/:id/shoecost', (req, res) => {
+  Shoesie.findById(req.params.id)
+    .then((shoesie) => {
       res.render('shoesies/edit', { shoesie })
     })
   })

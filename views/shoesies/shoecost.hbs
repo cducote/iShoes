@@ -1,0 +1,6 @@
+<h1>Whats the price of the shoes you want?</h1> 
+
+<form action='/shoesies/{{shoesie._id}}?_method=PUT' method='POST'>
+    <div>Shoe Price:<input type='text' name='shoeCost' value='{{shoesie.shoeCost}}'></div>
+    <div><input type='submit' value='Set Price'></div>
+</form>

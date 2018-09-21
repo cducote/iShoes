@@ -42,7 +42,7 @@ router.put('/', (req, res) => {
         return shoesie.save()
     })
     .then((shoesie) => {
-        console.log(shoesie.income.primaryIncome)
+        // console.log(shoesie.income.primaryIncome)
         res.redirect(`/shoesies/${req.params.shoesieId}/income`)
     })
 })
