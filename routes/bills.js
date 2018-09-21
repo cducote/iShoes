@@ -33,9 +33,13 @@ router.get('/edit', (req, res) => {
 })
 // Update billsies
 router.put('/', (req, res) => {
-    Shoesie.create(req.body)
+    Shoesie.findById(req.params.shoesieId)
       .then((shoesie) => {
-        res.redirect(`/shoesies/${shoesie._id}/bills`)
+        shoesie.bills = req.body
+        return shoesie.save() 
+      })
+      .then((shoesie) => {
+         res.redirect(`/shoesies/${req.params.shoesieId}/bills`) 
       })
   })   
 
