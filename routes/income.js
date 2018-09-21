@@ -6,7 +6,7 @@ const { Shoesie } = require('../db/schema')
 router.get('/', (req, res) => {
     Shoesie.findById(req.params.shoesieId)
     .then((shoesie) => {
-        shoesie.incomeTotal = shoesie.primaryIncome + shoesie.otherIncome
+        shoesie.incomeTotal = shoesie.income.primaryIncome + shoesie.income.otherIncome
         res.render('income/index', {
             shoesie,
             shoesieId: req.params.shoesieId,

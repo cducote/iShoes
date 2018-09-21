@@ -17,15 +17,16 @@ const chrisBills = new Bills({
     carInsurance: 120,
     power: 120,
     cc: 150,
-    other: 45
+    other: 45,
+    totalBills: 0
 })
 
 const chris = new Shoesie({
     shoesieName: "Chris",
     bills: chrisBills,
     income: chrisIncome,
-    billsTotal: 1035,
-    incomeTotal: 2400,
+    billsTotal: 0,
+    incomeTotal: 0,
     affordShoes: true
 })
 

@@ -12,7 +12,8 @@ const BillsSchema = new Schema({
     carInsurance: Number,
     power: Number,
     cc: Number,
-    other: Number
+    other: Number,
+    totalBills: Number
 }) 
 
 const ShoesieSchema = new Schema({
