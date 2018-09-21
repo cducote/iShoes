@@ -7,10 +7,13 @@ router.get('/', (req, res) => {
     Shoesie.findById(req.params.shoesieId)
     .then((shoesie) => {
         shoesie.incomeTotal = shoesie.income.primaryIncome + shoesie.income.otherIncome
+        return shoesie.save() 
+        })
+    .then((shoesie) => {
         res.render('income/index', {
             shoesie,
             shoesieId: req.params.shoesieId,
-            income: shoesie.income
+            income: shoesie.income  
         })
     })
     .catch(error => {

@@ -7,11 +7,14 @@ router.get('/', (req, res) => {
     Shoesie.findById(req.params.shoesieId)
     .then((shoesie) => {
         shoesie.billsTotal = shoesie.bills.rent + shoesie.bills.carInsurance + shoesie.bills.power + shoesie.bills.cc + shoesie.bills.other
+        return shoesie.save()
+    })
+    .then((shoesie) => {
         res.render('bills/index', {
             shoesie,
             shoesieId: req.params.shoesieId,
             bills: shoesie.bills
-        })
+        })    
     })
     .catch(error => {
         console.log(error)
