@@ -1,11 +1,19 @@
-<h1 id="title">Bills</h1>
+<div class="tile is-parent is-fullheight">
+        <article class="tile is-child notification is-warning">
+                <div class="content">
+                        <h1 id="title">Bills</h1>
 
-<div>
-        <div>Rent: {{bills.rent}}<br>
-        Car Insurance: {{bills.carInsurance}}<br>
-        Power Bill: {{bills.power}}<br>
-        Credit Cards: {{bills.cc}}<br>
-        Other: {{bills.other}}<br>
-        Total: {{shoesie.billsTotal}}<br>
-        <a href='/shoesies/{{shoesieId}}'>Go back</a> | <a href='/shoesies/{{shoesieId}}/bills/edit'>Edit</a></div>
+                        <div>
+                                <div>Rent: {{bills.rent}}<br>
+                                        Car Insurance: {{bills.carInsurance}}<br>
+                                        Power Bill: {{bills.power}}<br>
+                                        Credit Cards: {{bills.cc}}<br>
+                                        Other: {{bills.other}}<br>
+                                        Total: {{shoesie.billsTotal}}<br>
+                                        <a href='/shoesies/{{shoesieId}}/bills/edit'>Edit</a><br>
+                                        <a href='/shoesies/{{shoesieId}}'>Go back</a>
+                                </div>
+                        </div>
+                </div>
+        </article>
 </div>
