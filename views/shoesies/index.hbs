@@ -1,7 +1,15 @@
-<h1>The Shoesie Family <a href='shoesies/new'>( new )</a></h1>
+<div class="tile is-parent is-fullheight">
+    <article class="tile is-child notification is-warning">
+        <div class="content">
 
-<div>
-    {{#each shoesies}}
-        <div>Shoesie Name: {{this.shoesieName}} <a href='/shoesies/{{this._id}}'>Go to user</a></div>
-    {{/each}}
+            <h1 id="title">The Shoesie Family</h1>
+
+            <div>
+                {{#each shoesies}}
+                <div>Shoesie Name: {{this.shoesieName}} <a href='/shoesies/{{this._id}}'>Go to user</a></div>
+                {{/each}}
+            </div>
+            <a href='shoesies/new'> new </a>
+        </div>
+    </article>
 </div>
