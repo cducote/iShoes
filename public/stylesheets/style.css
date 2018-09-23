@@ -1,16 +1,16 @@
 #title {
   font: 56px 'Damion', cursive;
   line-height: 50px;
-  color: #242423;
+  color: #f1f1f1;
 }
 #subtitle {
   font: 40px 'Damion', cursive;
-  color: #242423;
+  color: #f1f1f1;
 }
 body {
   padding: 0px;
-  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: #242423;
+  font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #f1f1f1;
 }
 
 a {
@@ -19,5 +19,19 @@ a {
 
 .hero-body {
   padding-top: 0;
-  background: #333533
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#37c6d6+0,9d20bc+0,61e3e8+100 */
+background: rgb(55,198,214); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(55,198,214,1) 0%, rgba(157,32,188,1) 0%, rgba(97,227,232,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(55,198,214,1) 0%,rgba(157,32,188,1) 0%,rgba(97,227,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(55,198,214,1) 0%,rgba(157,32,188,1) 0%,rgba(97,227,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#37c6d6', endColorstr='#61e3e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.tile {
+  background: inherit;
+  border: 2px solid #f1f1f1;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.inner {
+  border: 0;
 }
