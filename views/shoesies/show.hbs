@@ -1,23 +1,18 @@
-<div class="tile is-parent">
+<div class="tile is-parent is-fullheight">
       <article class="tile is-child notification is-warning">
         <div class="content">
 
 <h1 id="title">Shoesie Page</h1>
 
-<div>Shoesie Name: {{shoesie.shoesieName}} <br>
+<div><h2 id="subtitle">{{shoesie.shoesieName}}</h2> <br>
 
     <a href='/shoesies/{{shoesie._id}}/bills'>(+) Bills</a>
     <a href='/shoesies/{{shoesie._id}}/income'>(+) Income</a>
 </div>
 <br><br>
 <br><a href='{{shoesie._id}}/shoecost'>Shoe Cost:</a> {{shoesie.shoeCost}}
-{{!-- <br>Income total: {{shoesie.incomeTotal}} --}}
-{{!-- <br>Bills total: {{shoesie.billsTotal}} --}}
-{{!-- <br>Net: {{shoesie.net}} --}}
+
 <br>Can afford shoes?: {{shoesie.affordShoes}}
-<br>
-<br>
-<br><br>
 <br>
 <a href='/shoesies'>See the Shoesie Family</a><br>
 <a href='/shoesies/{{shoesie._id}}/edit'>Edit Shoesie</a>

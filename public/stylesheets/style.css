@@ -1,11 +1,23 @@
 #title {
-  font: 56px 'Damion', cursive;;
+  font: 56px 'Damion', cursive;
+  line-height: 50px;
+  color: #242423;
+}
+#subtitle {
+  font: 40px 'Damion', cursive;
+  color: #242423;
 }
 body {
   padding: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #242423;
 }
 
 a {
   color: #00B7FF;
+}
+
+.hero-body {
+  padding-top: 0;
+  background: #333533
 }
