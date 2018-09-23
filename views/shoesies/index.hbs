@@ -6,7 +6,9 @@
 
             <div>
                 {{#each shoesies}}
-                <div>Shoesie Name: {{this.shoesieName}} <a href='/shoesies/{{this._id}}'>Go to user</a></div>
+                <div><span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span> <a href='/shoesies/{{this._id}}'>{{this.shoesieName}}</a>
                 {{/each}}
             </div>
             <a href='shoesies/new'> new </a>
