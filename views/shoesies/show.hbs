@@ -1,32 +1,5 @@
-<h1 id="title">Shoesie Page</h1>
-
-<div>Shoesie Name: {{shoesie.shoesieName}} <br>
-
-    <a href='/shoesies/{{shoesie._id}}/bills'>(+) Bills</a>
-    <a href='/shoesies/{{shoesie._id}}/income'>(+) Income</a>
-</div>
-<br><br>
-<br><a href='{{shoesie._id}}/shoecost'>Shoe Cost:</a> {{shoesie.shoeCost}}
-{{!-- <br>Income total: {{shoesie.incomeTotal}} --}}
-{{!-- <br>Bills total: {{shoesie.billsTotal}} --}}
-{{!-- <br>Net: {{shoesie.net}} --}}
-<br>Can afford shoes?: {{shoesie.affordShoes}}
-<br>
-<br>
-<br><br>
-<br>
-<a href='/shoesies'>See the Shoesie Family</a><br>
-<a href='/shoesies/{{shoesie._id}}/edit'>Edit Shoesie</a>
-
-
-<form action='/shoesies/{{shoesie._id}}?_method=DELETE' method='POST'>
-<input type="submit" value='Delete Shoesie'>
-</form>
-
 <div class="tile is-parent">
       <article class="tile is-child notification is-warning">
-        <p class="title">Wide tile</p>
-        <p class="subtitle">Aligned with the right tile</p>
         <div class="content">
 
 <h1 id="title">Shoesie Page</h1>
