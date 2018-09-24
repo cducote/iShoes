@@ -1,33 +1,32 @@
 <div class="tile is-parent is-fullheight">
-      <article class="tile is-child inner">
-        <div class="content">
+  <article class="tile is-child inner">
+    <div class="content">
 
-<h1 id="title">Shoesie Page</h1>
+      <h1 id="title">Shoesie Page</h1>
 
-<div><h2 id="subtitle">{{shoesie.shoesieName}}</h2> <br>
+      <div>
+        <h2 id="subtitle">{{shoesie.shoesieName}}</h2> <br>
 
-<a href='{{shoesie._id}}/shoecost'>Shoe Cost:</a> {{shoesie.shoeCost}}
+        <a href='{{shoesie._id}}/shoecost'>Shoe Cost:</a> {{shoesie.shoeCost}}
 
-<br>
-    <a href='/shoesies/{{shoesie._id}}/bills'>Bills</a>
-    <a href='/shoesies/{{shoesie._id}}/income'>Income</a>
-</div><br>
-
-
-<br>Can afford shoes?: {{shoesie.affordShoes}}<br>
-
-<a href='/shoesies'>Shoesie Family</a>
-<a href='/shoesies/{{shoesie._id}}/edit'>Edit Shoesie</a>
-
-<br><br>
-<form action='/shoesies/{{shoesie._id}}?_method=DELETE' method='POST'>
-<input class="button" type="submit" value='Delete Shoesie'>
-</form>
-         
+        <br>
+        <a href='/shoesies/{{shoesie._id}}/bills'>Bills</a>
+        <a href='/shoesies/{{shoesie._id}}/income'>Income</a>
+      </div><br>
 
 
+      <br>Should you buy?: {{shoesie.affordShoes}}<br><br><br>
 
-         
-        </div>
-      </article>
+      <a id="subtitle" href='/shoesies'>Shoesie Family</a>
+      
+
+      <br><br>
+      
+      <a href='/shoesies/{{shoesie._id}}/edit'><button class="button">Edit</button></a>
     </div>
+  </article>
+</div>
+<br>
+<form action='/shoesies/{{shoesie._id}}?_method=DELETE' method='POST'>
+        <input class="button" type="submit" value='Delete Shoesie'>
+      </form>

@@ -23,9 +23,10 @@ router.get('/:id', (req, res) => {
       shoesie.net = parseInt(shoesie.incomeTotal - shoesie.billsTotal)
       // determine if user can afford shoes or not
       if (shoesie.net >= shoesie.shoeCost) {
-        shoesie.affordShoes = true
+        shoesie.affordShoes = "yes"
+        
       } else {
-        shoesie.affordShoes = false
+        shoesie.affordShoes = "no"
       }
       return shoesie.save()
     })
