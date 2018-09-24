@@ -7,7 +7,7 @@
       <div>
         <h2 id="subtitle">{{shoesie.shoesieName}}</h2> 
 
-        <a href='{{shoesie._id}}/shoecost'>Shoe Cost:</a> {{shoesie.shoeCost}}
+        <a href='{{shoesie._id}}/shoecost'>Shoe Price:</a> {{shoesie.shoeCost}}
 
         <br>
         <a href='/shoesies/{{shoesie._id}}/bills'>Bills</a><br>
@@ -15,8 +15,14 @@
       </div><br>
 
 
-      <br>Should you buy?: {{shoesie.affordShoes}}<br><br><br>
+      <br>Should you buy? 
+      
+      <div class="boolybox">
+      <p id="booly">{{shoesie.affordShoes}}</p>
+      </div>
+      
 
+      <br>
       <a id="subtitle" href='/shoesies'>Shoesie Family</a>
       
 

@@ -9,6 +9,12 @@
   color: #f1f1f1;
 }
 
+#booly {
+  font: 34px 'Damion', cursive;
+  color: #ffffff;
+  margin: 0;
+}
+
 body {
   padding: 0px;
   font-family: 'Quicksand', sans-serif;
@@ -67,6 +73,15 @@ a {
   width: 250px;
 }
 
+.boolybox {
+  width: 80px;
+  border: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 15px;
+}
 
 @media (max-width: 480px) {
   .tile {
