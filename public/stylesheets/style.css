@@ -11,12 +11,17 @@
 
 body {
   padding: 0px;
-  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
+  color: #f1f1f1;
+}
+
+h2 {
   color: #f1f1f1;
 }
 
 a {
-  color: #00B7FF;
+  color: #f1f1f1;
 }
 
 .hero-body {
@@ -30,7 +35,7 @@ a {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#37c6d6', endColorstr='#61e3e8', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
-  
+
 }
 
 .tile {
@@ -52,7 +57,18 @@ a {
   padding-right: 20px;
   padding-left: 20px;
 }
+.button:hover {
+  color: #f1f1f1;
+}
 
 .field {
   width: 250px;
+}
+
+
+@media (max-width: 480px) {
+  .tile {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
