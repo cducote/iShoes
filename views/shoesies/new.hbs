@@ -1,12 +1,10 @@
-<div class="tile is-parent is-fullheight">
-  <article class="tile is-child inner notification">
+<div class="tile is-parent">
+  <article class="tile is-child inner">
     <div class="content">
 
-      <h1>Whats your name, Shoesie?</h1>
+      <h1 id="title">What's your name, Shoesie?</h1>
       <form action='/shoesies/{{this._id}}' method="POST">
-        {{!-- <input type="text" name="shoesieName" placeholder="Name"><br>
-        <input type="submit" value="Submit"> --}}
-
+        
         <div class="field">
           <p class="control has-icons-left">
             <input class="input" type="text" name="shoesieName" placeholder="{{shoesie.shoesieName}}">
@@ -17,12 +15,12 @@
         </div>
         <div class="field is-grouped">
           <div class="control">
-            <button class="button is-link">Submit</button>
+            <button class="button">Submit</button>
           </div>
       </form><br>
       
 
     </div>
   </article>
-</div>
-<a href="/shoesies"><button>Back</button></a>
+</div><br>
+<a href="/shoesies"><button class="button">Back</button></a>

@@ -6,19 +6,22 @@
 
 <div><h2 id="subtitle">{{shoesie.shoesieName}}</h2> <br>
 
+<a href='{{shoesie._id}}/shoecost'>Shoe Cost:</a> {{shoesie.shoeCost}}
+
+<br>
     <a href='/shoesies/{{shoesie._id}}/bills'>Bills</a>
     <a href='/shoesies/{{shoesie._id}}/income'>Income</a>
 </div><br>
-<a href='{{shoesie._id}}/shoecost'>Shoe Cost:</a> {{shoesie.shoeCost}}
 
-<br>Can afford shoes?: {{shoesie.affordShoes}}
 
-<a href='/shoesies'>See the Shoesie Family</a>
+<br>Can afford shoes?: {{shoesie.affordShoes}}<br>
+
+<a href='/shoesies'>Shoesie Family</a>
 <a href='/shoesies/{{shoesie._id}}/edit'>Edit Shoesie</a>
 
-
+<br><br>
 <form action='/shoesies/{{shoesie._id}}?_method=DELETE' method='POST'>
-<input type="submit" value='Delete Shoesie'>
+<input class="button" type="submit" value='Delete Shoesie'>
 </form>
          
 
