@@ -30,7 +30,7 @@ Once the user loads the home page, they are presented with instructions on how t
 
 ## EMD & Wireframe
 
-![Imgur Link -->](https://imgur.com/gallery/li998yV)
+[Imgur Link](https://imgur.com/gallery/li998yV)
 
 ## Future Development
 
