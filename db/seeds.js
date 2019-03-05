@@ -1,10 +1,5 @@
-require('dotenv').config()
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
-
-const Schema = require('./schema')
-
-const { Shoesie, Bills, Income } = Schema
+const Shoesie = require('../models/Shoesie')
 
 const chrisIncome = new Income({
     primaryIncome: 2000,

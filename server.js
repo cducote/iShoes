@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const logger = require('morgan')
 const methodOverride = require('method-override')
-const routes = require('/routs/index.js')
+const routes = require('./routes/index.js')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
