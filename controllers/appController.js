@@ -1,5 +1,7 @@
 const appController = {
   index: (req, res) => {
-    res.render('/views/index')
+    res.render('index')
   }
 }
+
+module.exports = appController

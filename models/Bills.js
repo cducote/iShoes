@@ -1,12 +1,6 @@
-const mongoose = require('../db/connection')
-const Schema = mongoose.Schema
+// const mongoose = require('../db/connection')
+// const Schema = mongoose.Schema
 
-const BillsSchema = new Schema({
-  rent: Number,
-  carInsurance: Number,
-  power: Number,
-  cc: Number,
-  other: Number
-}) 
 
-module.exports = mongoose.model("Bills", BillsSchema)
+
+// module.exports = mongoose.model("Bills", BillsSchema)

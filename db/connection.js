@@ -11,7 +11,7 @@ mongoose.connection.on('error', function(err) {
   console.error("MongoDB connection error: " + err)
   process.exit(-1)
 })
-mongoose.connectionl.once("open", function() {
+mongoose.connection.once("open", function() {
   console.log("Mongoose has connect to MongoDB!")
 })
 

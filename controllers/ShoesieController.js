@@ -11,4 +11,4 @@ const shoesieController = {
   }
 }
 
-module.exports = shoosieController
+module.exports = shoesieController

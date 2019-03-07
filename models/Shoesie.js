@@ -14,6 +14,19 @@ const defaultIncome = {
   otherIncome: 0
 }
 
+const BillsSchema = new Schema({
+  rent: Number,
+  carInsurance: Number,
+  power: Number,
+  cc: Number,
+  other: Number
+}) 
+
+const IncomeSchema = new Schema({
+  primaryIncome: Number,
+  otherIncome: Number
+})
+
 const ShoesieSchema = new Schema({
   shoesieName: String,
   bills: {
